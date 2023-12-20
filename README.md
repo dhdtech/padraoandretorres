@@ -35,6 +35,6 @@ O objetivo principal do site da Academia #PADRAOANDRETORRES é fornecer uma plat
   - Opções de contato para suporte técnico ou dúvidas administrativas.
 
 ## Planejamento e Custos
-O documento também irá abordar o planejamento detalhado e estimativa de custos para cada fase do projeto, incluindo design, desenvolvimento, testes e lançamento.
+O documento também irá abordar o planejamento detalhado e estimativa de custos para cada fase do projeto, incluindo design, desenvolvimento, testes e lançamento. [Ir para](https://github.com/dhdtech/padraoandretorres/blob/main/planejamento.md)
 
 **Nota:** Este resumo destaca o foco em funcionalidade, facilidade de uso e segurança, garantindo que os alunos tenham uma experiência positiva ao gerenciar suas atividades na academia.
