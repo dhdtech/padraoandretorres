@@ -1,4 +1,4 @@
-# Requisitos e Custos para Desenvolvimento Web da Academia #PADRAOANDRETORRES
+# Requisitos e Custos para Desenvolvimento
 
 ## Fase de Planejamento
 Foco na concepção e planejamento inicial do projeto.
