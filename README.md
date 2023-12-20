@@ -1,19 +1,40 @@
-# Objetivo do Documento para Desenvolvimento
+# Resumo do Projeto de Desenvolvimento Web da Academia #PADRAOANDRETORRES
 
-Este documento tem como objetivo estabelecer uma lista de requisitos para o desenvolvimento da página web da Academia #PADRAOANDRETORRES. Ele servirá como um roteiro detalhado para a criação de um site que reflete a identidade e os valores da academia, oferecendo uma experiência de usuário eficaz e envolvente.
+O objetivo principal do site da Academia #PADRAOANDRETORRES é fornecer uma plataforma onde os alunos possam gerenciar suas aulas. Isso inclui a visualização de horários, além de opções para cancelar e alterar as turmas. Além disso, o site terá um sistema de autenticação que permite o login usando Google, Microsoft ou Apple ID, mas somente se o e-mail do aluno estiver pré-cadastrado no sistema administrativo da academia. Este documento também propõe o planejamento e os custos associados ao desenvolvimento do site.
 
-## Principais Focos do Projeto:
+## Requisitos Chave
 
-- **Funcionalidade e Usabilidade:**
-  Assegurar que o site seja funcional, fácil de usar e atenda às necessidades dos alunos em termos de gerenciamento de aulas e horários.
+### Sistema de Gerenciamento de Aulas
+- **Funcionalidades:**
+  - Interface para visualização do calendário de turmas.
+  - Opções para cancelar e alterar inscrições em turmas.
 
-- **Integração de Autenticação:**
-  Implementar um sistema de autenticação que permite o login dos alunos utilizando Google, Microsoft ou Apple ID, mas somente se os seus e-mails estiverem pré-cadastrados no sistema administrativo da academia.
+### Integração com Sistemas de Login de Terceiros
+- **Funcionalidades:**
+  - Integração com Google, Microsoft e Apple ID para autenticação.
+  - Verificação de e-mail pré-cadastrado.
 
-- **Design Responsivo e Acessível:**
-  Criar um design que seja adaptável a diferentes dispositivos e acessível a todos os usuários.
+### Painel Administrativo
+- **Funcionalidades:**
+  - Capacidade da academia de cadastrar e gerenciar e-mails dos alunos.
+  - Ferramentas para administrar horários de aulas e informações relevantes.
 
-- **Segurança de Dados:**
-  Garantir a proteção das informações pessoais dos alunos e a conformidade com as normativas de privacidade.
+### Segurança e Privacidade de Dados
+- **Funcionalidades:**
+  - Medidas para proteger informações pessoais dos alunos.
+  - Conformidade com regulamentos de privacidade e proteção de dados.
 
-O objetivo é criar uma plataforma online que não apenas atraia e retenha membros, mas também forneça informações úteis e relevantes sobre os serviços, programas e instalações da academia. O site deve atender às necessidades do negócio e dos usuários finais, proporcionando uma experiência digital completa e satisfatória.
+### Design Responsivo e Acessível
+- **Funcionalidades:**
+  - Interface amigável e acessível em dispositivos móveis e desktops.
+  - Recursos de acessibilidade para usuários com necessidades especiais.
+
+### Suporte e Ajuda
+- **Funcionalidades:**
+  - Seção de FAQ para dúvidas comuns.
+  - Opções de contato para suporte técnico ou dúvidas administrativas.
+
+## Planejamento e Custos
+O documento também irá abordar o planejamento detalhado e estimativa de custos para cada fase do projeto, incluindo design, desenvolvimento, testes e lançamento.
+
+**Nota:** Este resumo destaca o foco em funcionalidade, facilidade de uso e segurança, garantindo que os alunos tenham uma experiência positiva ao gerenciar suas atividades na academia.
