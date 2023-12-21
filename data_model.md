@@ -1,5 +1,6 @@
 ```mermaid
 erDiagram
+    users ||--o{ teachers : ""
     users ||--o{ student_enrollments : ""
     users ||--o{ student_schedule_preferences : ""
     users ||--o{ student_class_agendas : ""
@@ -33,6 +34,7 @@ erDiagram
 
     teachers {
         integer teacher_id PK
+        varchar user_email FK
         varchar teacher_name
         timestamp created_at
         timestamp updated_at
