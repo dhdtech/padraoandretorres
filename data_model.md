@@ -1,8 +1,10 @@
 ```mermaid
 erDiagram
     users ||--o{ student_enrollments : ""
+    users ||--o{ student_schedule_preferences : ""
     classes ||--o{ class_schedule : ""
     class_schedule ||--o{ student_enrollments : ""
+    class_schedule ||--o{ student_class_agendas : ""
 
     users {
         varchar email PK
@@ -40,6 +42,29 @@ erDiagram
         integer enrollment_id PK
         varchar user_email FK
         integer schedule_id FK
+        timestamp created_at
+        timestamp updated_at
+        varchar created_by
+        varchar last_updated_by
+    }
+
+    student_schedule_preferences {
+        integer preference_id PK
+        varchar user_email FK
+        integer class_id FK
+        integer preferred_day
+        time preferred_time
+        timestamp created_at
+        timestamp updated_at
+        varchar created_by
+        varchar last_updated_by
+    }
+
+    student_class_agendas {
+        integer agenda_id PK
+        varchar user_email FK
+        integer schedule_id FK
+        date class_date
         timestamp created_at
         timestamp updated_at
         varchar created_by
