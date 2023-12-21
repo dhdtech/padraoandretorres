@@ -4,8 +4,8 @@ erDiagram
     users ||--o{ student_schedule_preferences : ""
     users ||--o{ student_class_agendas : ""
     classes ||--o{ class_schedule : ""
-    teachers ||--o{ teacher_availability : ""
-    teacher_availability ||--o{ class_schedule : ""
+    teachers ||--o{ teacher_default_schedule : ""
+    teacher_default_schedule ||--o{ class_schedule : ""
     class_schedule ||--o{ student_enrollments : ""
 
     users {
@@ -38,11 +38,12 @@ erDiagram
         varchar last_updated_by
     }
 
-    teacher_availability {
-        integer availability_id PK
+    teacher_default_schedule {
+        integer default_schedule_id PK
         integer teacher_id FK
         integer class_id FK
-        integer day_of_week
+        integer default_day
+        time default_time
         timestamp created_at
         timestamp updated_at
         varchar created_by
@@ -52,7 +53,7 @@ erDiagram
     class_schedule {
         integer schedule_id PK
         integer class_id FK
-        integer availability_id FK
+        integer teacher_id FK
         integer day_of_week
         integer active_slots
         timestamp created_at
