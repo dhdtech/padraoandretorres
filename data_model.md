@@ -7,6 +7,8 @@ erDiagram
     teachers ||--o{ teacher_default_schedule : ""
     teacher_default_schedule ||--o{ class_schedule : ""
     class_schedule ||--o{ student_enrollments : ""
+    weeks ||--o{ class_schedule : ""
+    weeks ||--o{ student_class_agendas : ""
 
     users {
         varchar email PK
@@ -50,10 +52,21 @@ erDiagram
         varchar last_updated_by
     }
 
+    weeks {
+        integer week_id PK
+        integer year
+        integer week_number
+        timestamp created_at
+        timestamp updated_at
+        varchar created_by
+        varchar last_updated_by
+    }
+
     class_schedule {
         integer schedule_id PK
         integer class_id FK
         integer teacher_id FK
+        integer week_id FK
         integer day_of_week
         integer active_slots
         timestamp created_at
@@ -88,6 +101,8 @@ erDiagram
         integer agenda_id PK
         varchar user_email FK
         integer schedule_id FK
+        integer week_id FK
+        integer day_of_week
         date class_date
         timestamp created_at
         timestamp updated_at
