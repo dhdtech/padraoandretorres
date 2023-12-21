@@ -2,9 +2,10 @@
 erDiagram
     users ||--o{ student_enrollments : ""
     users ||--o{ student_schedule_preferences : ""
+    users ||--o{ student_class_agendas : ""
     classes ||--o{ class_schedule : ""
+    teachers ||--o{ class_schedule : ""
     class_schedule ||--o{ student_enrollments : ""
-    class_schedule ||--o{ student_class_agendas : ""
 
     users {
         varchar email PK
@@ -27,9 +28,19 @@ erDiagram
         varchar last_updated_by
     }
 
+    teachers {
+        integer teacher_id PK
+        varchar teacher_name
+        timestamp created_at
+        timestamp updated_at
+        varchar created_by
+        varchar last_updated_by
+    }
+
     class_schedule {
         integer schedule_id PK
         integer class_id FK
+        integer teacher_id FK
         integer day_of_week
         integer available_slots
         timestamp created_at
@@ -70,5 +81,4 @@ erDiagram
         varchar created_by
         varchar last_updated_by
     }
-
 ```
