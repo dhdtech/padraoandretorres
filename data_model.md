@@ -1,3 +1,30 @@
+# Descrição Simplificada do Modelo de Dados
+
+Esta descrição tem como objetivo explicar o modelo de dados da Academia de uma forma que seja fácil de entender, mesmo para aqueles sem conhecimento técnico. O modelo é projetado para gerenciar aulas, professores, alunos e agendamentos de forma eficiente.
+
+## Visão Geral
+
+O sistema é composto por várias 'tabelas' que armazenam diferentes tipos de informações. Cada tabela tem uma função específica, como armazenar dados sobre os usuários (alunos e professores), aulas, agendamentos e preferências. Essas tabelas estão interconectadas para formar o sistema completo da Academia.
+
+## Tabela `users`
+
+- **Propósito:** Armazena informações básicas sobre todos os usuários, sejam eles alunos ou professores.
+- **Campos Principais:**
+  - `email`: O endereço de e-mail do usuário, usado como identificação única.
+  - `first_name`: O primeiro nome do usuário.
+  - `last_name`: O sobrenome do usuário.
+  - `created_at`: A data e hora em que o usuário foi adicionado ao sistema.
+  - `updated_at`: A última data e hora em que as informações do usuário foram atualizadas.
+  - `created_by`: Quem criou o registro do usuário.
+  - `last_updated_by`: Quem atualizou o registro do usuário pela última vez.
+
+### Casos de Uso para `users`
+
+1. **Cadastro de Aluno/Professor:** Quando um novo aluno ou professor é adicionado à academia, suas informações são registradas nesta tabela.
+2. **Atualização de Dados:** Se um usuário precisa atualizar seu nome ou outro detalhe, isso é refletido nesta tabela.
+3. **Identificação do Usuário:** O sistema usa o e-mail para identificar e diferenciar cada usuário, seja para fazer login ou para atribuir aulas e agendamentos.
+
+
 ```mermaid
 erDiagram
     users ||--o{ teachers : ""
