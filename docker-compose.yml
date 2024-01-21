@@ -1,0 +1,40 @@
+version: "3"
+volumes:
+  padraoandretorres_admin_db_data:
+services:
+  api:
+    container_name: padraoandretorres-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: root
+    ports:
+      - "8082:8000"
+      - "8083:3011"
+    command: >
+      sh -c "python manage.py migrate && python manage.py runserver_plus 0.0.0.0:8000 --cert-file cert.crt --key-file cert.key"
+    volumes:
+      - ./padraoandretorres:/padraoandretorres
+    env_file:
+      - local.env
+    restart: on-failure
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    container_name: padraoandretorres-db
+    image: postgis/postgis:15-3.3
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=supersecretpassword
+    ports:
+      - "7772:5432"
+    volumes:
+      - padraoandretorres_admin_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 1s
+      timeout: 5s
+      retries: 20
+      start_period: 30s

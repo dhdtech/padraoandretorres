@@ -30,8 +30,8 @@ O sistema é composto por várias 'tabelas' que armazenam diferentes tipos de in
 
 - **Propósito:** Armazena informações sobre as diferentes aulas oferecidas pela academia.
 - **Campos Principais:**
-  - `class_id`: Identificador único para cada aula.
-  - `class_name`: Nome ou descrição da aula. 
+  - `course_id`: Identificador único para cada aula.
+  - `class_name`: Nome ou descrição da aula.
     - Exemplo: "Yoga Matinal", "Musculação Avançada".
   - `start_time`: Horário de início da aula.
     - Exemplo: "08:00", "18:30".
@@ -182,7 +182,7 @@ erDiagram
     }
 
     classes {
-        integer class_id PK
+        integer course_id PK
         varchar class_name
         time start_time
         interval duration
@@ -205,7 +205,7 @@ erDiagram
     teacher_default_schedule {
         integer default_schedule_id PK
         integer teacher_id FK
-        integer class_id FK
+        integer course_id FK
         integer default_day
         time default_time
         timestamp created_at
@@ -226,7 +226,7 @@ erDiagram
 
     class_schedule {
         integer schedule_id PK
-        integer class_id FK
+        integer course_id FK
         integer teacher_id FK
         integer week_id FK
         integer day_of_week
@@ -250,7 +250,7 @@ erDiagram
     student_schedule_preferences {
         integer preference_id PK
         varchar user_email FK
-        integer class_id FK
+        integer course_id FK
         integer preferred_day
         time preferred_time
         timestamp created_at

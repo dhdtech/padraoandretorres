@@ -1,0 +1,14 @@
+# PYTHON COMMOM GII IGNORE FILES
+# ------------------------------
+venv
+.vscode
+.idea
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.DS_Store
+*.egg-info
+dist
+build
+*.egg

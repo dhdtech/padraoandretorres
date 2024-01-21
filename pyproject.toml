@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "padraoandretorres"
+version = "0.1.0"
+description = "Admin dashboard and REST Api"
+authors = ["Diogo Dias < diogo@dhdtech.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.1"
+Django = "^5.0"
+django-extensions = "^3.2.3"
+psycopg2-binary = "^2.9.9"
+social-auth-app-django = "^5.4.0"
+pyOpenSSL = "^23.3.0"
+djangorestframework = "^3.14.0"
+django-cors-headers = "^4.3.1"
+Markdown = "^3.5.1"
+django-filter = "^23.5"
+python-jose = "^3.3.0"
+werkzeug = "^3.0.1"
+uwsgi = "^2.0.23"
+whitenoise = "^6.6.0"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.3.4"
+debugpy = "^1.8.0"
+flake8 = "^6.1.0"
+pre-commit = "^3.6.0"
+drf-spectacular = "^0.27.0"
+jupyter = "^1.0.0"
+notebook = "^7.0.6"
+black = "^23.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
